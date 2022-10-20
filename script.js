@@ -1,10 +1,6 @@
-const computerSelection = getComputerChoice();
-const playerSelection = prompt();
-
-
 function getComputerChoice() {
     const rndmChoices = ['rock', 'paper', 'scissors'];
-    let randomString = rndmChoices[Math.floor(Math.random() * rndmChoices.length)];
+    const randomString = rndmChoices[Math.floor(Math.random() * 3)];
     return randomString
 }
 
@@ -39,4 +35,15 @@ function playRound(playerSelection, computerSelection) {
         return('you lost, try again!')
 }
 }
+function game() {
+for (let i = 0; i < 5; i++) {
+    console.log(playRound(playerSelection, computerSelection));
+ }
+}
+const computerSelection = getComputerChoice();
+const playerSelection = prompt('Choose your weapon', 'rock paper scissors')
+let compScore = 0
+let playerScore= 0
+console.log(playRound(playerSelection, computerSelection));
+
 
